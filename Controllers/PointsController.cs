@@ -99,7 +99,7 @@ namespace PointSystem.Controllers
             });
 
             
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
 
             return CreatedAtAction(nameof(GetPoints), new {id = userId }, result.Entity);
